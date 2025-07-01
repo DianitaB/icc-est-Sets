@@ -38,7 +38,5 @@ Para ejecutar el proyecto:
     java App
     ```
 ## Imagen de los resultados esperados 
-
-![Resultado de Ejecución](imagen.PNG)
-
+![Resultado de Ejecución](Sets.png)
 
