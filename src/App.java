@@ -1,47 +1,71 @@
 import java.util.Set;
+
 import controller.Sets;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Sets set = new Sets();
-        System.out.println(set);
-        runHasSet(set);
-        runLinkedHashSet(set);
-        runTreeHashSet(set);
-        runTreeComparatorSet(set);
+
+        Sets sets = new Sets();
+
+        runHashSet(sets);
+        runLinkedList(sets);
+        runTreeSet(sets);
+        runTreeComparatorSet(sets);
+        runTreeSetConComparadorDescendente(sets);
+    
     }
 
-    public static void runHasSet(Sets set) {
-        Set<String> ejemploHashSet = set.construirHashSet();
-        System.out.println("----HashSet-----");
-        System.out.println("Elementos del HashSet (no se garantiza el orden): ");
-        for (String elemento : ejemploHashSet) {
-            System.out.println(elemento);
-        }
-    }
+    public static void runHashSet(Sets sets) {
+        Set<String> resultado = sets.construirHashSet(); 
 
-    public static void runLinkedHashSet(Sets set) {
-        Set<String> ejemploLinkedHashSet = set.construirLinkedHashSet();
-        System.out.println("-----LinkedHashSet------");
-        for (String elemento : ejemploLinkedHashSet) {
-            System.out.println(elemento);
-        }
-    }
+        System.out.println("----------HashSet----------");
+        System.out.println("Elemntos del HashSet (no se garantiza orden)");
 
-    public static void runTreeHashSet(Sets set) {
-        Set<String> ejemplosTreeSet = set.construirTreeSet(); 
-        System.out.println("-----TreeSet------");
-        for (String eleme : ejemplosTreeSet) {
-            System.out.println(eleme);
-        }
-    }
-    public static void runTreeComparatorSet(Sets set){
-        Set<String> resultado = set.construirTreeSetConComparador();
-
-        System.out.println("---------TreeSetConComparator---------");
         for (String palabra : resultado) {
             System.out.println(palabra);
         }
-
     }
+
+    public static void runLinkedList(Sets sets) {
+        Set<String> resultado = sets.construirLinkedHashSet();
+
+        System.out.println("------LinkedHashSet---------");
+        System.out.println("Elementos del LinkedHashSet (orden de inserción):");
+
+        for (String palabra : resultado) {
+            System.out.println(palabra);
+        }
+    }
+
+    public static void runTreeSet(Sets sets){
+        Set<String> resultado = sets.constriurTreeSet();
+
+        System.out.println("----------TreeSet----------");
+        System.out.println("Elementos del TreeSet (xxxxxxxxx)");
+
+        for (String palabra : resultado) {
+            System.out.println(palabra);
+        }
+    }
+
+    public static void runTreeComparatorSet(Sets sets){
+        Set<String> resultado = sets.construirTreeSetConComparador();
+
+        System.out.println("---------TreeSetComparator---------");
+        System.out.println("Elemtnos del TreeSetComparator(Por Longitud y luego alfabéticamente)");
+
+        for (String palabra : resultado) {
+            System.out.println(palabra);
+        }
+    }
+
+    public static void runTreeSetConComparadorDescendente(Sets sets) {
+    Set<String> resultado = sets.construirTreeSetConComparadorDescendente();
+    System.out.println("---------TreeSetComparator Descendente---------");
+    System.out.println("Elementos ordenados por longitud descendente y luego alfabéticamente (Z-A):");
+    for (String palabra : resultado) {
+        System.out.println(palabra);
+    }
+}
+
 }
