@@ -17,7 +17,7 @@ public class App {
 
     public static void runHashSet(Sets sets) {
         Set<String> resultado = sets.construirHashSet(); 
-
+        System.out.println("DIANA BORJA");
         System.out.println("----------HashSet----------");
         System.out.println("Elemntos del HashSet (no se garantiza orden)");
 
