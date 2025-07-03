@@ -37,6 +37,6 @@ Para ejecutar el proyecto:
     ```bash
     java App
     ```
-## Imagen de los resultados esperados 
-![Resultado de Ejecución](Sets.png)
+## Imagen de los resultados esperados
 
+![Resultado Ejecucion](Sets.png)

@@ -1,5 +1,7 @@
 import java.util.Set;
 
+import controller.ContactoController;
+import controller.Ejercicios;
 import controller.Sets;
 
 public class App {
@@ -12,12 +14,17 @@ public class App {
         runTreeSet(sets);
         runTreeComparatorSet(sets);
         runTreeSetConComparadorDescendente(sets);
-    
+
+        ContactoController contactoController = new ContactoController();
+        contactoController.runTreeContacto(); 
+        contactoController.runTreeContactoComparator();
+        new Ejercicios();
     }
 
     public static void runHashSet(Sets sets) {
-        Set<String> resultado = sets.construirHashSet(); 
-        System.out.println("DIANA BORJA");
+        Set<String> resultado = sets.ConstruirHashSet(); 
+
+        System.out.println("Keyra Carvajal");
         System.out.println("----------HashSet----------");
         System.out.println("Elemntos del HashSet (no se garantiza orden)");
 
@@ -27,7 +34,7 @@ public class App {
     }
 
     public static void runLinkedList(Sets sets) {
-        Set<String> resultado = sets.construirLinkedHashSet();
+        Set<String> resultado = sets.ConstruirLinkedList();
 
         System.out.println("------LinkedHashSet---------");
         System.out.println("Elementos del LinkedHashSet (orden de inserción):");
@@ -38,7 +45,7 @@ public class App {
     }
 
     public static void runTreeSet(Sets sets){
-        Set<String> resultado = sets.constriurTreeSet();
+        Set<String> resultado = sets.ConstruirTreeSet();
 
         System.out.println("----------TreeSet----------");
         System.out.println("Elementos del TreeSet (xxxxxxxxx)");
@@ -49,7 +56,7 @@ public class App {
     }
 
     public static void runTreeComparatorSet(Sets sets){
-        Set<String> resultado = sets.construirTreeSetConComparador();
+        Set<String> resultado = sets.construirTreeSetConcomparador();
 
         System.out.println("---------TreeSetComparator---------");
         System.out.println("Elemtnos del TreeSetComparator(Por Longitud y luego alfabéticamente)");
@@ -60,12 +67,13 @@ public class App {
     }
 
     public static void runTreeSetConComparadorDescendente(Sets sets) {
-    Set<String> resultado = sets.construirTreeSetConComparadorDescendente();
-    System.out.println("---------TreeSetComparator Descendente---------");
-    System.out.println("Elementos ordenados por longitud descendente y luego alfabéticamente (Z-A):");
-    for (String palabra : resultado) {
-        System.out.println(palabra);
-    }
-}
+        Set<String> resultado = sets.construirTreeSetConComparadorDescendente();
 
+        System.out.println("---------TreeSetComparator Descendente---------");
+        System.out.println("Elementos ordenados por longitud descendente y luego alfabéticamente (Z-A):");
+
+        for (String palabra : resultado) {
+            System.out.println(palabra);
+        }
+    }
 }

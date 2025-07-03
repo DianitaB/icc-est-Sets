@@ -95,6 +95,7 @@ public class Sets {
         }
     };
 
+
     Set<String> miTreeSet = new TreeSet<>(comparadorDesc);
 
     miTreeSet.add("Laptop");
@@ -105,8 +106,8 @@ public class Sets {
     miTreeSet.add("Pera");
     miTreeSet.add("Laptop");
     miTreeSet.add("Celulas");
-
     return miTreeSet;
-}
+
+    }
 
 }
